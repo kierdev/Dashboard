@@ -1,6 +1,10 @@
+"use client";
 import { ProductCard } from "./product-card";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
+
 export default function InventoryPage() {
+  const router = useRouter();
   return (
     <section className="grid grid-cols-6 w-full">
       <ProductCard />
@@ -12,7 +16,13 @@ export default function InventoryPage() {
       <ProductCard />
       <ProductCard />
       <div className="fixed right-8 bottom-8">
-        <Button>Add Product</Button>
+        <Button
+          onClick={() => {
+            router.push("/inventory/create");
+          }}
+        >
+          Add Product
+        </Button>
       </div>
     </section>
   );

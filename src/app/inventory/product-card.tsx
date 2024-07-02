@@ -8,13 +8,13 @@ export const ProductCard = () => {
         height={48}
         width={48}
         alt="image of product"
-        className="w-full bg-black "
+        className="w-full bg-black"
       ></Image>
       <div>Product</div>
       <div>Price</div>
       <div className="flex gap-4">
         <Button variant="destructive">Delete</Button>
-        <Button variant="secondary">Secondary</Button>
+        <Button variant="secondary">Update</Button>
       </div>
     </div>
   );
