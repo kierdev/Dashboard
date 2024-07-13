@@ -6,7 +6,7 @@ export const Sidebar = () => {
       <Link className="" href={"/"}>
         Overview
       </Link>
-      <Link href={"/inventory"}>Inventory</Link>
+      <Link href={"/dashboard/inventory"}>Inventory</Link>
     </aside>
   );
 };
