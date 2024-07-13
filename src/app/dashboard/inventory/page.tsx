@@ -3,10 +3,11 @@ import { ProductCard } from "./product-card";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { getProducts } from "../_actions/get-products";
+import { getProducts } from "./_actions/get-products";
 
 export default function InventoryPage() {
   type Product = {
+    _id: string;
     name: string;
     price: number;
     code: string;
@@ -32,6 +33,7 @@ export default function InventoryPage() {
         return (
           <ProductCard
             key={index}
+            id={product._id}
             name={product.name}
             code={product.code}
             price={product.price}
