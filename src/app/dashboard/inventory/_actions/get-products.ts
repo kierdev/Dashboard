@@ -5,6 +5,7 @@ export async function getProducts() {
       "content-type": "application/json",
     },
   });
-  const products = await res.json();
+  const data = await res.json();
+  const products = data.products;
   return products;
 }

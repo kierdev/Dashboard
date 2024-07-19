@@ -1,19 +1,12 @@
-export async function addProduct() {
-  console.log("Post");
+import { TProduct } from "@/lib/zod-schema";
 
+export async function addProduct(formData: TProduct) {
+  console.log(formData);
   const response = await fetch("/api/products", {
     method: "POST",
-    body: JSON.stringify({
-      name: "Jeans 12",
-      price: 200,
-      category: "Pants",
-      code: "#ABC123",
-      image_url: "",
-      acquisitionCost: 100,
-    }),
+    body: JSON.stringify(formData),
   });
   const res = response.json();
-  console.log(res);
 
   return res;
 }
